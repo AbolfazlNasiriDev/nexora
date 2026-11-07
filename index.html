@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA | فروشگاه تخصصی محصولات دیجیتال</title>
+  <meta name="description" content="NEXORA، فروشگاه اینترنتی محصولات دیجیتال، موبایل، لپ‌تاپ، قطعات کامپیوتر، گجت هوشمند و لوازم جانبی با ضمانت اصالت کالا و ارسال سریع.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235B45E8'/%3E%3Cpath d='M9 24V8l14 16V8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- ============================ hero slider ============================ -->
+    <section class="shell mt-3 md:mt-5">
+      <div class="relative rounded-[1.75rem] md:rounded-[2.25rem] overflow-hidden hero-mesh" id="hero-wrap">
+        <div class="absolute inset-0 hero-grid-lines pointer-events-none"></div>
+        <div class="relative" id="hero-slides"></div>
+
+        <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6 flex items-center gap-2 z-10">
+          <button id="hero-prev" class="w-9 h-9 rounded-xl bg-white/10 border border-white/20 text-white grid place-items-center hover:bg-white/20 transition" aria-label="اسلاید قبلی">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+          <button id="hero-next" class="w-9 h-9 rounded-xl bg-white/10 border border-white/20 text-white grid place-items-center hover:bg-white/20 transition" aria-label="اسلاید بعدی">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <div class="flex items-center gap-1.5 ms-2" id="hero-dots"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-3 mt-3 md:mt-4">
+        <div class="card flex items-center gap-3 p-3 md:p-3.5">
+          <span class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-primary-50 text-primary grid place-items-center shrink-0"><i data-lucide="truck" class="w-[18px] h-[18px]"></i></span>
+          <div><div class="text-[11.5px] font-bold text-ink">ارسال سریع</div><div class="text-[10px] text-muted mt-0.5">تهران زیر ۲۴ ساعت</div></div>
+        </div>
+        <div class="card flex items-center gap-3 p-3 md:p-3.5">
+          <span class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-emerald-50 text-emerald-600 grid place-items-center shrink-0"><i data-lucide="shield-check" class="w-[18px] h-[18px]"></i></span>
+          <div><div class="text-[11.5px] font-bold text-ink">ضمانت اصالت</div><div class="text-[10px] text-muted mt-0.5">تضمین کالای اصل</div></div>
+        </div>
+        <div class="card flex items-center gap-3 p-3 md:p-3.5">
+          <span class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-amber-50 text-amber-600 grid place-items-center shrink-0"><i data-lucide="rotate-ccw" class="w-[18px] h-[18px]"></i></span>
+          <div><div class="text-[11.5px] font-bold text-ink">بازگشت کالا</div><div class="text-[10px] text-muted mt-0.5">۷ روز مهلت بازگشت</div></div>
+        </div>
+        <div class="card flex items-center gap-3 p-3 md:p-3.5">
+          <span class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-sky-50 text-sky-600 grid place-items-center shrink-0"><i data-lucide="credit-card" class="w-[18px] h-[18px]"></i></span>
+          <div><div class="text-[11.5px] font-bold text-ink">پرداخت امن</div><div class="text-[10px] text-muted mt-0.5">درگاه امن بانکی</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= popular categories ======================== -->
+    <section class="shell mt-9 md:mt-12">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title"><span class="w-1.5 h-5 rounded-full bg-primary inline-block"></span> دسته‌بندی‌های محبوب</h2>
+          <p class="section-sub">سریع‌ترین راه برای رسیدن به محصول مورد نظر شما</p>
+        </div>
+        <a href="products.html" class="section-link">همه دسته‌بندی‌ها <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i></a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-2.5 md:gap-3" id="popular-cats"></div>
+    </section>
+
+    <!-- =========================== amazing offers ========================== -->
+    <section class="shell mt-9 md:mt-12">
+      <div class="gaming-mesh rounded-[1.75rem] md:rounded-[2rem] p-4 md:p-6 relative overflow-hidden">
+        <div class="absolute inset-0 hero-grid-lines opacity-60 pointer-events-none"></div>
+        <div class="relative">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-rose-500 to-primary-600 grid place-items-center shadow-glow">
+                <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+              </span>
+              <div>
+                <h2 class="text-white text-lg md:text-xl font-black">پیشنهاد شگفت‌انگیز</h2>
+                <p class="text-white/50 text-[11px] mt-1">تخفیف‌های محدود، تا پایان امروز</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex items-center gap-1.5" id="deal-countdown">
+                <div class="cd-box"><b data-cd="h">۰۰</b><span>ساعت</span></div>
+                <div class="cd-box"><b data-cd="m">۰۰</b><span>دقیقه</span></div>
+                <div class="cd-box"><b data-cd="s">۰۰</b><span>ثانیه</span></div>
+              </div>
+              <a href="products.html?deals=1" class="btn btn-outline !bg-white/10 !border-white/20 !text-white btn-sm hidden sm:inline-flex">همه پیشنهادها</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-3" id="deals-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ bestsellers ============================ -->
+    <section class="shell mt-10 md:mt-14">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title"><span class="w-1.5 h-5 rounded-full bg-primary inline-block"></span> پرفروش‌ترین محصولات</h2>
+          <p class="section-sub">انتخاب هزاران کاربر NEXORA در ۳۰ روز گذشته</p>
+        </div>
+        <a href="products.html?sort=popular" class="section-link">مشاهده همه <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i></a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-4" id="bestsellers-grid"></div>
+    </section>
+
+    <!-- ============================ promo banner 1 ========================= -->
+    <section class="shell mt-10 md:mt-14">
+      <div class="grid md:grid-cols-2 gap-3 md:gap-4">
+        <a href="category.html?cat=parts" class="relative overflow-hidden rounded-3xl p-5 md:p-7 min-h-[180px] flex items-center bg-gradient-to-l from-[#2A1B5E] to-[#15172B] group">
+          <div class="relative z-10 max-w-[60%]">
+            <span class="chip !bg-white/10 !border-white/20 !text-white/70 !text-[10px]">قطعات کامپیوتر</span>
+            <h3 class="text-white font-black text-lg md:text-2xl mt-2 leading-snug">ارتقای سیستم،<br>تا ۳۰٪ ارزان‌تر</h3>
+            <p class="text-white/50 text-[11px] mt-2">پردازنده، کارت گرافیک و حافظه SSD</p>
+            <span class="inline-flex items-center gap-1 text-primary-300 text-[11px] font-bold mt-3 group-hover:gap-2 transition-all">مشاهده قطعات <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i></span>
+          </div>
+          <img alt="" data-banner-art="asus-tuf-rtx-5070" class="absolute -left-4 bottom-0 w-40 md:w-52 opacity-90 group-hover:scale-105 transition-transform duration-500">
+        </a>
+        <a href="category.html?cat=audio" class="relative overflow-hidden rounded-3xl p-5 md:p-7 min-h-[180px] flex items-center bg-gradient-to-l from-[#0F3B4C] to-[#101C2E] group">
+          <div class="relative z-10 max-w-[60%]">
+            <span class="chip !bg-white/10 !border-white/20 !text-white/70 !text-[10px]">صوتی و تصویری</span>
+            <h3 class="text-white font-black text-lg md:text-2xl mt-2 leading-snug">سینمای خانگی<br>در خانه شما</h3>
+            <p class="text-white/50 text-[11px] mt-2">تلویزیون، ساندبار و پروژکتور</p>
+            <span class="inline-flex items-center gap-1 text-sky-300 text-[11px] font-bold mt-3 group-hover:gap-2 transition-all">مشاهده محصولات <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i></span>
+          </div>
+          <img alt="" data-banner-art="jbl-bar-1000" class="absolute -left-4 bottom-0 w-40 md:w-52 opacity-90 group-hover:scale-105 transition-transform duration-500">
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================== newest ============================== -->
+    <section class="shell mt-10 md:mt-14">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title"><span class="w-1.5 h-5 rounded-full bg-emerald-500 inline-block"></span> جدیدترین محصولات</h2>
+          <p class="section-sub">تازه رسیده‌های انبار NEXORA</p>
+        </div>
+        <a href="products.html?sort=newest" class="section-link">مشاهده همه <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i></a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-4" id="newest-grid"></div>
+    </section>
+
+    <!-- ============================== gaming ============================== -->
+    <section class="shell mt-10 md:mt-14">
+      <div class="gaming-mesh rounded-[1.75rem] md:rounded-[2rem] p-4 md:p-6 relative overflow-hidden">
+        <div class="absolute inset-0 hero-grid-lines opacity-50 pointer-events-none"></div>
+        <div class="relative">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-rose-500 to-orange-500 grid place-items-center">
+                <i data-lucide="gamepad-2" class="w-5 h-5 text-white"></i>
+              </span>
+              <div>
+                <h2 class="text-white text-lg md:text-xl font-black">دنیای گیمینگ</h2>
+                <p class="text-white/50 text-[11px] mt-1">کنسول، دسته بازی و لوازم جانبی حرفه‌ای</p>
+              </div>
+            </div>
+            <a href="category.html?cat=gaming" class="btn btn-outline !bg-white/10 !border-white/20 !text-white btn-sm">ورود به دنیای بازی</a>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-3" id="gaming-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== brands ============================== -->
+    <section class="shell mt-10 md:mt-14">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title"><span class="w-1.5 h-5 rounded-full bg-ink inline-block"></span> محبوب‌ترین برندها</h2>
+          <p class="section-sub">همکاری رسمی با معتبرترین برندهای جهان</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden nx-brand">
+        <div class="marquee py-4" id="brands-strip"></div>
+      </div>
+    </section>
+
+    <!-- ============================ recommended =========================== -->
+    <section class="shell mt-10 md:mt-14">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title"><span class="w-1.5 h-5 rounded-full bg-primary inline-block"></span> پیشنهادی برای شما</h2>
+          <p class="section-sub">بر اساس محبوبیت و کیفیت، انتخاب‌شده توسط تیم NEXORA</p>
+        </div>
+        <a href="products.html" class="section-link">همه محصولات <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i></a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-4" id="recommended-grid"></div>
+    </section>
+
+    <!-- ============================ testimonials ========================== -->
+    <section class="shell mt-10 md:mt-14">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title"><span class="w-1.5 h-5 rounded-full bg-amber-400 inline-block"></span> نظرات مشتریان NEXORA</h2>
+          <p class="section-sub">تجربه واقعی خریداران از کیفیت خدمات ما</p>
+        </div>
+        <span class="hidden sm:flex items-center gap-1.5 text-[11px] text-muted">
+          <i data-lucide="badge-check" class="w-4 h-4 text-emerald-500"></i> ۴.۸ از ۵ در ۲٣ هزار نظر
+        </span>
+      </div>
+      <div class="grid md:grid-cols-3 gap-3 md:gap-4" id="testimonials"></div>
+    </section>
+
+    <!-- ============================= benefits ============================= -->
+    <section class="shell mt-10 md:mt-14" id="benefits">
+      <div class="card p-5 md:p-8 rounded-[1.75rem] relative overflow-hidden">
+        <div class="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-primary-50"></div>
+        <div class="relative">
+          <h2 class="section-title">چرا از NEXORA خرید کنیم؟</h2>
+          <p class="section-sub mb-6">تجربه‌ای مطمئن، سریع و شفاف از انتخاب تا تحویل</p>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="benefits-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/categories.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

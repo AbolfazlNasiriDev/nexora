@@ -1,0 +1,401 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5b45e8;
+  --color-primary-dark: #4a34d6;
+  --color-primary-soft: #f0edff;
+  --color-ink: #15172b;
+  --color-page: #f7f8fc;
+  --color-line: #e8eaf3;
+  --color-muted: #777c8c;
+  --color-sale: #ef4444;
+  --color-success: #16a34a;
+
+  --font-sans: var(--font-vazirmatn), "Vazirmatn", "Segoe UI", Tahoma, system-ui, sans-serif;
+
+  --radius-card: 1.35rem;
+
+  --shadow-soft: 0 1px 2px rgba(21, 23, 43, 0.04), 0 12px 30px -18px rgba(21, 23, 43, 0.25);
+  --shadow-lift: 0 18px 46px -22px rgba(91, 69, 232, 0.45);
+  --shadow-panel: 0 24px 70px -30px rgba(21, 23, 43, 0.4);
+
+  --ease-nx: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --nx-header: 7.25rem;
+  color-scheme: light;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01";
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(91, 69, 232, 0.18);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* ---- scrollbars ------------------------------------------------------- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: #d7dae8;
+  border-radius: 999px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---- layout ------------------------------------------------------------ */
+.shell {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 1024px) {
+  .shell {
+    padding-inline: 2rem;
+  }
+}
+
+/* ---- surfaces ---------------------------------------------------------- */
+.nx-card {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.45s var(--ease-nx),
+    box-shadow 0.45s var(--ease-nx),
+    border-color 0.45s var(--ease-nx);
+}
+.nx-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 69, 232, 0.28);
+  box-shadow: var(--shadow-lift);
+}
+
+.nx-panel {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: 1.15rem;
+  box-shadow: var(--shadow-panel);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: saturate(150%) blur(16px);
+  -webkit-backdrop-filter: saturate(150%) blur(16px);
+}
+
+/* ---- buttons ----------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.95rem;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 0.25s var(--ease-nx),
+    box-shadow 0.25s var(--ease-nx),
+    background-color 0.25s var(--ease-nx),
+    color 0.25s var(--ease-nx),
+    border-color 0.25s var(--ease-nx),
+    opacity 0.25s var(--ease-nx);
+}
+.btn:active {
+  transform: scale(0.975);
+}
+.btn-primary {
+  background: linear-gradient(135deg, #6b57ff 0%, #5b45e8 55%, #4a34d6 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px -12px rgba(91, 69, 232, 0.75);
+}
+.btn-primary:hover {
+  box-shadow: 0 16px 32px -14px rgba(91, 69, 232, 0.85);
+  transform: translateY(-1px);
+}
+.btn-soft {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+.btn-soft:hover {
+  background: #e6e1ff;
+}
+.btn-ghost {
+  border: 1px solid var(--color-line);
+  background: #fff;
+  color: var(--color-ink);
+}
+.btn-ghost:hover {
+  border-color: rgba(91, 69, 232, 0.35);
+  background: #fbfaff;
+}
+
+.btn-dark {
+  background: var(--color-ink);
+  color: #fff;
+}
+.btn-dark:hover {
+  background: #22253d;
+}
+
+/* ---- inputs ------------------------------------------------------------ */
+.nx-input {
+  width: 100%;
+  border-radius: 0.9rem;
+  border: 1px solid var(--color-line);
+  background: #fff;
+  padding: 0.72rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  transition:
+    border-color 0.25s var(--ease-nx),
+    box-shadow 0.25s var(--ease-nx),
+    background-color 0.25s var(--ease-nx);
+}
+.nx-input::placeholder {
+  color: #a4a8b8;
+}
+.nx-input:hover {
+  border-color: #d8dbe9;
+}
+.nx-input:focus {
+  outline: none;
+  border-color: rgba(91, 69, 232, 0.55);
+  box-shadow: 0 0 0 4px rgba(91, 69, 232, 0.12);
+}
+.nx-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a4f63;
+}
+
+/* ---- chips & badges ---------------------------------------------------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.8;
+  transition:
+    background-color 0.25s var(--ease-nx),
+    color 0.25s var(--ease-nx),
+    border-color 0.25s var(--ease-nx);
+}
+
+.nx-image {
+  transition:
+    transform 0.7s var(--ease-nx),
+    filter 0.5s var(--ease-nx);
+}
+.group:hover .nx-image {
+  transform: scale(1.07) rotate(-1deg);
+}
+
+/* ---- link underline ---------------------------------------------------- */
+.nx-link {
+  position: relative;
+  transition: color 0.25s var(--ease-nx);
+}
+.nx-link::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s var(--ease-nx);
+}
+.nx-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---- animations -------------------------------------------------------- */
+@keyframes nx-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes nx-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+@keyframes nx-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes nx-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes nx-shimmer {
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes nx-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(91, 69, 232, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(91, 69, 232, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 69, 232, 0);
+  }
+}
+
+.animate-fade-up {
+  animation: nx-fade-up 0.7s var(--ease-nx) both;
+}
+.animate-pop {
+  animation: nx-pop 0.35s var(--ease-nx) both;
+}
+.animate-float {
+  animation: nx-float 6s ease-in-out infinite;
+}
+.animate-slide-in {
+  animation: nx-slide-in 0.4s var(--ease-nx) both;
+}
+.animate-pulse-ring {
+  animation: nx-pulse-ring 2.4s ease-out infinite;
+}
+
+/* stagger helper */
+.stagger > * {
+  animation: nx-fade-up 0.65s var(--ease-nx) both;
+}
+.stagger > *:nth-child(1) { animation-delay: 0.02s; }
+.stagger > *:nth-child(2) { animation-delay: 0.07s; }
+.stagger > *:nth-child(3) { animation-delay: 0.12s; }
+.stagger > *:nth-child(4) { animation-delay: 0.17s; }
+.stagger > *:nth-child(5) { animation-delay: 0.22s; }
+.stagger > *:nth-child(6) { animation-delay: 0.27s; }
+.stagger > *:nth-child(7) { animation-delay: 0.32s; }
+.stagger > *:nth-child(8) { animation-delay: 0.37s; }
+
+/* hero decoration */
+.nx-mesh {
+  background-image:
+    radial-gradient(60% 60% at 85% 10%, rgba(140, 123, 255, 0.55) 0%, transparent 60%),
+    radial-gradient(55% 55% at 10% 90%, rgba(56, 189, 248, 0.22) 0%, transparent 60%),
+    radial-gradient(45% 45% at 50% 50%, rgba(91, 69, 232, 0.16) 0%, transparent 65%);
+}
+
+.nx-grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.nx-shine {
+  position: relative;
+  overflow: hidden;
+}
+.nx-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+  transition: transform 0.9s var(--ease-nx);
+}
+.group:hover .nx-shine::after {
+  transform: translateX(120%);
+}
+
+/* range / switch */
+input[type="checkbox"].nx-check {
+  accent-color: var(--color-primary);
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Keep short hover transitions even when the OS asks for reduced motion;
+   only disable long/looping movement, which is the part that causes discomfort. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float,
+  .animate-pulse-ring {
+    animation: none !important;
+  }
+  .stagger > *,
+  .animate-fade-up,
+  .animate-pop,
+  .animate-slide-in {
+    animation-duration: 0.01ms !important;
+  }
+  .nx-card-hover:hover {
+    transform: none;
+  }
+}

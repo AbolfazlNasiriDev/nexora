@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="NEXORA">
+  <defs>
+    <linearGradient id="nxMark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C6BFF"/>
+      <stop offset=".55" stop-color="#5B45E8"/>
+      <stop offset="1" stop-color="#3D28C2"/>
+    </linearGradient>
+    <linearGradient id="nxShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".42"/>
+      <stop offset=".55" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="nxGlow" cx="30%" cy="18%" r="70%">
+      <stop offset="0" stop-color="#B9AEFF" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#B9AEFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#nxMark)"/>
+  <rect width="64" height="64" rx="18" fill="url(#nxGlow)"/>
+  <rect x="1" y="1" width="62" height="62" rx="17" fill="none" stroke="#FFFFFF" stroke-opacity=".28"/>
+  <rect width="64" height="32" rx="18" fill="url(#nxShine)"/>
+  <path d="M20.5 45.5V18.5L43.5 45.5V18.5" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="49.5" cy="15.5" r="3.4" fill="#FFFFFF"/>
+  <circle cx="49.5" cy="15.5" r="1.5" fill="#5B45E8"/>
+</svg>

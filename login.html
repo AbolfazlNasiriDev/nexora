@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود به حساب | NEXORA</title>
+  <meta name="description" content="ورود به حساب کاربری NEXORA با ایمیل یا شماره موبایل (نسخه نمایشی).">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235B45E8'/%3E%3Cpath d='M9 24V8l14 16V8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body data-page="login">
+  <div id="site-header"></div>
+
+  <main class="shell py-5 md:py-9">
+    <div class="max-w-5xl mx-auto card overflow-hidden rounded-[1.75rem] grid lg:grid-cols-2">
+      <div class="p-5 md:p-8">
+        <div class="flex items-center gap-2 text-[10px] font-semibold text-muted">
+          <a href="index.html" class="hover:text-primary">خانه</a>
+          <i data-lucide="chevron-left" class="w-3 h-3"></i>
+          <span class="text-ink">ورود</span>
+        </div>
+        <h1 class="text-xl md:text-2xl font-black text-ink mt-3">ورود به حساب کاربری</h1>
+        <p class="text-[11.5px] text-muted mt-2 leading-6">برای پیگیری سفارش‌ها، ذخیره علاقه‌مندی‌ها و مدیریت حساب وارد شوید.</p>
+
+        <div class="rounded-xl border border-amber-200 bg-amber-50 p-3 mt-4 flex items-start gap-2">
+          <i data-lucide="triangle-alert" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+          <p class="text-[10px] leading-5 text-amber-700">این ورود آزمایشی است و اطلاعات در LocalStorage مرورگر ذخیره می‌شود. احراز هویت امن واقعی نیازمند بک‌اند است.</p>
+        </div>
+
+        <form id="login-form" class="mt-5 space-y-3" novalidate>
+          <div>
+            <label class="lbl" for="login-identifier">ایمیل یا شماره موبایل</label>
+            <input id="login-identifier" name="identifier" class="field" autocomplete="username" placeholder="demo@nexora.ir یا 09121111111">
+            <p class="error-text" data-error-for="identifier"></p>
+          </div>
+          <div>
+            <label class="lbl" for="login-password">رمز عبور</label>
+            <div class="relative">
+              <input id="login-password" name="password" type="password" class="field pe-11" autocomplete="current-password" placeholder="رمز عبور خود را وارد کنید">
+              <button type="button" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted hover:text-ink" data-toggle-password aria-label="نمایش رمز">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <p class="error-text" data-error-for="password"></p>
+          </div>
+          <div class="flex items-center justify-between gap-2">
+            <label class="flex items-center gap-2 cursor-pointer text-[11px] text-ink/75">
+              <input type="checkbox" class="check" name="remember"> مرا به خاطر بسپار
+            </label>
+            <a href="mailto:support@nexora.example?subject=بازیابی رمز عبور" class="text-[10.5px] font-semibold text-primary">فراموشی رمز عبور؟</a>
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">
+            <i data-lucide="log-in" class="w-[18px] h-[18px]"></i> ورود به حساب
+          </button>
+        </form>
+
+        <p class="text-[11px] text-muted text-center mt-4">
+          حساب کاربری ندارید؟ <a href="register.html" class="font-bold text-primary">ثبت‌نام کنید</a>
+        </p>
+
+        <div class="rounded-xl border border-line bg-page p-3 mt-4">
+          <div class="text-[10.5px] font-bold text-ink mb-2 flex items-center gap-1.5"><i data-lucide="flask-conical" class="w-3.5 h-3.5 text-primary"></i> حساب‌های آزمایشی</div>
+          <div class="space-y-1.5">
+            <button class="w-full flex items-center justify-between gap-2 text-[10.5px] rounded-lg bg-white border border-line px-2.5 py-2 hover:border-primary-200 transition" data-fill="user">
+              <span class="text-ink/80">کاربر نمونه: demo@nexora.ir</span>
+              <span class="font-mono text-muted" dir="ltr">Demo@1234</span>
+            </button>
+            <button class="w-full flex items-center justify-between gap-2 text-[10.5px] rounded-lg bg-white border border-line px-2.5 py-2 hover:border-primary-200 transition" data-fill="admin">
+              <span class="text-ink/80">مدیر فروشگاه: admin@nexora.ir</span>
+              <span class="font-mono text-muted" dir="ltr">Admin@1234</span>
+            </button>
+          </div>
+          <p class="text-[9.5px] text-muted mt-2">برای پر کردن خودکار فرم روی هر حساب کلیک کنید.</p>
+        </div>
+      </div>
+
+      <aside class="hidden lg:flex hero-mesh p-8 flex-col justify-between relative overflow-hidden">
+        <div class="absolute inset-0 hero-grid-lines opacity-60"></div>
+        <div class="relative">
+          <div class="flex items-center gap-2.5">
+            <span class="grid place-items-center w-10 h-10 rounded-2xl bg-white/10 border border-white/20">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 19V5l14 14V5"/></svg>
+            </span>
+            <div>
+              <div class="text-white font-black">NEXORA</div>
+              <div class="text-[10px] text-white/50">تکنولوژی، یک قدم جلوتر</div>
+            </div>
+          </div>
+          <h2 class="text-white text-2xl font-black mt-8 leading-snug">تجربه خریدی که<br>به آن اعتماد می‌کنید</h2>
+          <p class="text-white/55 text-[11.5px] leading-7 mt-3 max-w-xs">با ورود به حساب، سفارش‌ها، آدرس‌ها و علاقه‌مندی‌های خود را در یک‌جا مدیریت کنید.</p>
+          <ul class="mt-6 space-y-3">
+            ${''}
+            <li class="flex items-start gap-2.5 text-[11px] text-white/70"><span class="w-5 h-5 rounded-full bg-emerald-400/20 text-emerald-300 grid place-items-center shrink-0"><i data-lucide="check" class="w-3 h-3"></i></span> پیگیری لحظه‌ای وضعیت سفارش‌ها</li>
+            <li class="flex items-start gap-2.5 text-[11px] text-white/70"><span class="w-5 h-5 rounded-full bg-emerald-400/20 text-emerald-300 grid place-items-center shrink-0"><i data-lucide="check" class="w-3 h-3"></i></span> ذخیره علاقه‌مندی‌ها و مقایسه محصولات</li>
+            <li class="flex items-start gap-2.5 text-[11px] text-white/70"><span class="w-5 h-5 rounded-full bg-emerald-400/20 text-emerald-300 grid place-items-center shrink-0"><i data-lucide="check" class="w-3 h-3"></i></span> آدرس‌های ذخیره‌شده برای خرید سریع‌تر</li>
+          </ul>
+        </div>
+        <div class="relative rounded-2xl bg-white/[.06] border border-white/10 p-4">
+          <div class="flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-primary-500/30 text-white grid place-items-center text-[11px] font-bold">س</span>
+            <div>
+              <div class="text-[11px] font-bold text-white">سارا محمدی</div>
+              <div class="text-[9.5px] text-white/45">خریدار وفادار NEXORA</div>
+            </div>
+          </div>
+          <p class="text-[10.5px] leading-6 text-white/60 mt-2">«همه سفارش‌هایم را از پنل کاربری پیگیری می‌کنم؛ خیلی شفاف و ساده است.»</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/categories.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

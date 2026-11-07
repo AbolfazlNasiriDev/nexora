@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 88" width="360" height="88" role="img" aria-label="NEXORA">
+  <defs>
+    <linearGradient id="markBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C6BFF"/>
+      <stop offset=".55" stop-color="#5B45E8"/>
+      <stop offset="1" stop-color="#3D28C2"/>
+    </linearGradient>
+    <linearGradient id="markShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".42"/>
+      <stop offset=".6" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#15172B"/>
+      <stop offset="1" stop-color="#3B3070"/>
+    </linearGradient>
+  </defs>
+  <rect y="12" width="64" height="64" rx="18" fill="url(#markBg)"/>
+  <rect y="12" width="64" height="32" rx="18" fill="url(#markShine)"/>
+  <rect x="1" y="13" width="62" height="62" rx="17" fill="none" stroke="#FFFFFF" stroke-opacity=".26"/>
+  <path d="M20.5 57.5V30.5L43.5 57.5V30.5" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="49.5" cy="27.5" r="3.4" fill="#FFFFFF"/>
+  <circle cx="49.5" cy="27.5" r="1.5" fill="#5B45E8"/>
+  <text x="82" y="53" font-family="Vazirmatn, 'Segoe UI', Tahoma, sans-serif" font-size="30" font-weight="800" letter-spacing="4.5" fill="url(#word)">NEXORA</text>
+  <text x="84" y="72" font-family="Vazirmatn, 'Segoe UI', Tahoma, sans-serif" font-size="12" font-weight="600" letter-spacing=".5" fill="#777C8C">فروشگاه تخصصی محصولات دیجیتال</text>
+</svg>

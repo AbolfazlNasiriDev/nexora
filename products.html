@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>همه محصولات | NEXORA</title>
+  <meta name="description" content="فهرست کامل محصولات NEXORA با فیلتر قیمت، برند، رنگ، امتیاز و تخفیف؛ خرید موبایل، لپ‌تاپ، قطعات کامپیوتر و گجت هوشمند.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235B45E8'/%3E%3Cpath d='M9 24V8l14 16V8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body data-page="products">
+  <div id="site-header"></div>
+
+  <main class="shell py-4 md:py-6">
+    <nav id="breadcrumb" class="text-[11px] text-muted mb-3 flex items-center gap-1.5 flex-wrap"></nav>
+
+    <section class="card p-4 md:p-5 mb-4">
+      <div class="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h1 id="page-title" class="text-xl md:text-2xl font-black text-ink">همه محصولات NEXORA</h1>
+          <p id="page-desc" class="text-[11.5px] text-muted mt-2 max-w-2xl leading-6">مجموعه‌ای منتخب از محصولات دیجیتال و الکترونیکی؛ با ضمانت اصالت کالا، قیمت شفاف و ارسال سریع به سراسر کشور.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="products.html?deals=1" class="btn btn-outline btn-sm !border-rose-200 !text-rose-600 hover:!bg-rose-50">
+            <i data-lucide="flame" class="w-4 h-4"></i> پیشنهاد شگفت‌انگیز
+          </a>
+          <a href="compare.html" class="btn btn-soft btn-sm"><i data-lucide="git-compare" class="w-4 h-4"></i> مقایسه</a>
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto no-scrollbar mt-4 pb-1" id="quick-cats"></div>
+    </section>
+
+    <div class="grid lg:grid-cols-[270px_minmax(0,1fr)] gap-4 items-start">
+      <aside class="hidden lg:block card p-4 sticky top-28" id="filters-desktop">
+        <div id="filters-root-desktop"></div>
+      </aside>
+
+      <section class="min-w-0">
+        <div class="card p-3 mb-3" id="listing-toolbar"></div>
+        <div class="flex flex-wrap gap-2 mb-3" id="active-filters"></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2.5 md:gap-3" id="listing-grid"></div>
+        <div class="mt-6" id="listing-pagination"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div class="fixed inset-0 bg-ink/50 backdrop-blur-sm z-[85] hidden" id="filters-overlay"></div>
+  <aside class="filter-panel lg:hidden" id="filters-mobile" aria-label="فیلتر محصولات">
+    <div class="p-4 border-b border-line flex items-center justify-between sticky top-0 bg-white z-10">
+      <div class="text-sm font-extrabold text-ink flex items-center gap-2"><i data-lucide="sliders-horizontal" class="w-4 h-4 text-primary"></i> فیلترها</div>
+      <button class="icon-btn !w-9 !h-9" data-close-filters aria-label="بستن فیلترها"><i data-lucide="x" class="w-4 h-4"></i></button>
+    </div>
+    <div class="p-4" id="filters-root-mobile"></div>
+  </aside>
+
+  <script src="js/categories.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>
